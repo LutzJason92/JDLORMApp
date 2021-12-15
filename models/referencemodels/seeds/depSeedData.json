@@ -1,0 +1,14 @@
+[
+    {
+        "dep_name": "Sales"
+    },
+    {
+        "dep_name": "Engineering"
+    },
+    {
+        "dep_name": "Finance"
+    },
+    {
+        "dep_name": "Legal"
+    }
+]
