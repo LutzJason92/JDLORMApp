@@ -19,11 +19,11 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:cat_id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   try {
-    const catData = await Category.findByPk(req.params.cat_id);
+    const catData = await Category.findByPk(req.params.id);
     if (!catData) {
       res.status(404).json({ message: "No DEPARTMENT with this id!" });
       return;
@@ -40,14 +40,14 @@ router.post("/", async (req, res) => {
   return res.json(catData);
 });
 
-router.put("/:cat_id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const catData = await Category.update(
     {
       category_name: req.body.category_name,
     },
     {
       where: {
-        cat_id: req.params.cat_id,
+        id: req.params.id,
       },
     }
   );
@@ -55,10 +55,10 @@ router.put("/:cat_id", async (req, res) => {
   return res.json(catData);
 });
 
-router.delete("/:cat_id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const catData = await Category.destroy({
     where: {
-      cat_id: req.params.cat_id,
+      id: req.params.id,
     },
   });
   return res.json(catData);
