@@ -10,13 +10,13 @@ class Product extends Model {}
 // set up fields and rules for Product model
 Product.init(
   {
-    pro_id: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
     },
-    pro_name: {
+    product_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -31,15 +31,15 @@ Product.init(
       // validates numeric value
       // set initial value to 10
     },
-    cat_id: {
+    category_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         // This is a reference to another model
-        model: Category,
+        model: "category",
 
         // This is the column name of the referenced model
-        key: "cat_id",
+        key: "id",
       },
     },
   },

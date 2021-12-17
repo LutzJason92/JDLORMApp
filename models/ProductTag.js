@@ -8,31 +8,31 @@ class ProductTag extends Model {}
 ProductTag.init(
   {
     // table columns
-    proTag_id: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
+    },
+    product_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        // This is a reference to another model
+        model: "product",
+        // This is the column name of the referenced model
+        key: "pro_id",
+      },
     },
     tag_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         // This is a reference to another model
-        model: Tag,
+        model: "tag",
 
         // This is the column name of the referenced model
-        key: "tag_id",
-      },
-    },
-    pro_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        // This is a reference to another model
-        model: Product,
-        // This is the column name of the referenced model
-        key: "pro_id",
+        key: "id",
       },
     },
   },
