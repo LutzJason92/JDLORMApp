@@ -249,9 +249,9 @@ This homework is graded based on the following criteria:
 
 You are required to submit BOTH of the following for review:
 
-- []A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
+- [x]A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
-- []The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
+- [x]The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
 
 ---
 
